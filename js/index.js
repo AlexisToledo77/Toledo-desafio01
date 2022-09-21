@@ -1,6 +1,18 @@
 //simulador interactivo de turnos 
 
-let comando = prompt("Ingrese segun su necesidad: sugerencia / consulta / turno." + "\nPara salir ingrese: esc").toLowerCase();
+function Saludo(){
+    let nombre = prompt ("Ingresa tu nombre para comenzar");
+    let saludar = `Hola ${nombre}`;
+    alert(saludar);
+}
+
+function error(){
+    alert("ingrese un comando valido");
+}
+
+Saludo();
+
+let comando = prompt(`Ingrese segun su necesidad: sugerencia / consulta / turno." + "\nPara salir ingrese: esc`).toLowerCase();
 
 while (comando != "esc") {
     switch (comando) {
@@ -39,7 +51,7 @@ while (comando != "esc") {
             break;
 
         default:
-            alert("ingrese un comando valido");
+            error();
             
     }
     comando = prompt("Ingrese segun su necesidad: sugerencia / consulta / turno" + "\nPara salir ingrese: esc");
